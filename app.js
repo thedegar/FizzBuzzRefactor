@@ -5,7 +5,7 @@ var fizzBuzz = function (value) {
 	for (var i=1;i<=value;i++) {
 		//If divisible by 3 and 5 (aka 15), use "fizz buzz"
 		if (i%15==0) {
-			text="fizz buzz";
+			text="fizzbuzz";
 		}
 		//If divisible by 3, use "fizz"
 		else if (i%3==0) {
@@ -20,7 +20,7 @@ var fizzBuzz = function (value) {
 			text=i;
 		}
 		//Find the last p in the body and insert a new p with text after it.
-		$("body").find("p").last().after("<p></p>").text(text);
+		$("body").find("p").last().after("<p></p>").text(text).addClass(text);
 	}
 };
 
