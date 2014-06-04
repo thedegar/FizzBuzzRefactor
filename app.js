@@ -26,10 +26,9 @@ var fizzBuzz = function (value) {
 
 var inputNumber = function () {
 	var count = prompt("Enter a value");
-	console.log(count);
 	count = +count;
 	//Check that the input is a proper value.  This accounts for decimals and strings.
-	while (count%1 != 0) {
+	while (count%1 != 0 || count == 0 || count[0] == " ") {
 		count = prompt("You entered a bad value.  Please use an integer number.");
 	}
 	return count;
